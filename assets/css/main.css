@@ -12,10 +12,25 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
+
+  --background-color: #ffffff; /* Background color for the entire website */
+  --default-color: #272829; /* Default color for the majority of text */
+  --heading-color: #050d18; /* Color for headings and titles */
+  --accent-color: #149ddd; /* Accent color for buttons, links, etc. */
+  --surface-color: #ffffff; /* Background of boxed elements */
+  --contrast-color: #ffffff; /* Ensures readability against background */
+  
+  --nav-color: #a8a9b4; /* Nav menu links */
+  --nav-hover-color: #ffffff; /* Hover color for nav menu links */
+  --nav-mobile-background-color: #040b14; /* Background color for mobile menu */
+  --nav-dropdown-background-color: #040b14; /* Background color for dropdown items */
+  --nav-dropdown-color: #a8a9b4; /* Dropdown item links */
+  --nav-dropdown-hover-color: #ffffff; /* Hover color for dropdown links */
 }
+
 :root.dark {
   --background-color: #121212;
   --default-color: #ffffff;
@@ -26,32 +41,6 @@
   --nav-color: #c7c7c7;
   --nav-hover-color: #ffffff;
 }
-
-
-
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #050d18; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #149ddd; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
-}
-
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
-:root {
-  --nav-color: #a8a9b4;  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #040b14; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #040b14; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #a8a9b4; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #ffffff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
-
-}
-
-
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
   --background-color: #f4fafd;
@@ -66,13 +55,13 @@
   --contrast-color: #ffffff;
 }
 
-/* Smooth transition for the sections */
-section {
-  transition: background-color 1.3s ease, color 1.3s ease;
+.no-theme-toggle {
+  color: #ffffff !important; /* Prevent theme toggle from affecting */
+  background-color: inherit !important;
 }
 
-/* Smooth transition for the body */
-body {
+/* Smooth transition for all sections and body */
+body, section {
   transition: background-color 1.3s ease, color 1.3s ease;
 }
 
@@ -101,8 +90,12 @@ a:hover {
   text-decoration: none;
 }
 
+h2 {
+  color: white;
+  font-family: var(--heading-font);
+}
+
 h1,
-h2,
 h3,
 h4,
 h5,
@@ -625,6 +618,16 @@ section,
 .hero .container {
   position: relative;
   z-index: 3;
+  background-color: rgba(0, 0, 0, 0.8); /* Black background with 80% transparency */
+  display: inline-block; /* Shrinks the background to fit the text */
+  padding: 5px 10px; /* Adds some padding directly around the text */
+  border-radius: 8px; /* Adds rounded corners */
+  margin: 0; /* Removes extra space caused by margin */
+  box-sizing: border-box; /* Ensures padding is included within the element's width and height */
+}
+
+.hero .container h2, .hero .container p {
+  margin: 0; /* Removes extra margin on h2 and p elements */
 }
 
 .hero h2 {
