@@ -2,8 +2,26 @@ document.addEventListener("DOMContentLoaded", function () {
   const body = document.body;
   const toggleThemeButton = document.getElementById("toggle-theme-nav");
   const sections = document.querySelectorAll("section");
+  const clockElement = document.getElementById("current-time");
 
-  // Function to toggle between dark and light backgrounds for all sections
+  // Function to update the clock
+  function updateClock() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    if (clockElement) {
+      clockElement.textContent = `${hours}:${minutes}:${seconds}`;
+    }
+  }
+
+  // Initialize the clock immediately and set it to update every second
+  if (clockElement) {
+    updateClock();
+    setInterval(updateClock, 1000);
+  }
+
+  // Function to toggle dark and light mode for all sections
   function toggleSectionBackgrounds() {
     sections.forEach((section) => {
       if (section.classList.contains("dark-background")) {
@@ -16,10 +34,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+
   // Theme toggle button logic
   if (toggleThemeButton) {
     toggleThemeButton.addEventListener("click", () => {
-      // Toggle the body theme class
       if (body.classList.contains("dark")) {
         body.classList.remove("dark");
         localStorage.setItem("theme", "light");
@@ -27,14 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
         body.classList.add("dark");
         localStorage.setItem("theme", "dark");
       }
-
-      // Toggle backgrounds for all sections
       toggleSectionBackgrounds();
-
-      console.log(
-        `Dark mode toggled. Current body class list:`,
-        body.classList
-      );
     });
   }
 

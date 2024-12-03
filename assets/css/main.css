@@ -18,7 +18,7 @@
 
   --background-color: #ffffff; /* Background color for the entire website */
   --default-color: #272829; /* Default color for the majority of text */
-  --heading-color: #050d18; /* Color for headings and titles */
+  --heading-color: black; /* Color for headings and titles */
   --accent-color: #149ddd; /* Accent color for buttons, links, etc. */
   --surface-color: #ffffff; /* Background of boxed elements */
   --contrast-color: #ffffff; /* Ensures readability against background */
@@ -33,8 +33,8 @@
 
 :root.dark {
   --background-color: #121212;
-  --default-color: #ffffff;
-  --heading-color: #e0e0e0;
+  --default-color: #e0e0e0;
+  --heading-color: #ffffff;
   --accent-color: #bb86fc;
   --surface-color: #1f1f1f;
   --contrast-color: #ffffff;
@@ -44,7 +44,10 @@
 
 .light-background {
   --background-color: #f4fafd;
-  --surface-color: #ffffff;
+  --default-color: black;
+  --heading-color: black;
+  --surface-color: white;
+  --contrast-color: black;
 }
 
 .dark-background {
@@ -95,13 +98,10 @@ h2 {
   font-family: var(--heading-font);
 }
 
-h1,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--heading-color);
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color) !important;
   font-family: var(--heading-font);
+  transition: color 0.3s ease;
 }
 
 /* PHP Email Form Messages
@@ -285,6 +285,14 @@ h6 {
   flex-grow: 1;
 }
 
+#current-time {
+  font-size: 16px;
+  color: var(--nav-color);
+  font-family: var(--nav-font);
+  padding: 10px;
+  border-top: 1px solid rgba(var(--default-color-rgb, 255, 255, 255), 0.1);
+}
+
 .navmenu a,
 .navmenu a:focus {
   color: var(--nav-color);
@@ -370,7 +378,7 @@ h6 {
   background-color: var(--nav-dropdown-background-color);
   border: 1px solid rgba(var(--default-color-rgb, 255, 255, 255), 0.9);
   box-shadow: none;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   border-radius: 5px;
 }
 
