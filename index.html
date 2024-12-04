@@ -1298,11 +1298,8 @@
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="row gy-4">
-
           <div class="col-lg-5">
-
             <div class="info-wrap">
               <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
                 <a href="https://www.google.com/maps/place/Saul%C4%97tekio+al.+25,+Vilnius,+10225+Vilniaus+m.+sav./@54.7234169,25.3423789,17z/data=!3m1!4b1!4m6!3m5!1s0x46dd96e61417589f:0x1976bd57ef50d93d!8m2!3d54.7234169!4d25.3423789!16s%2Fg%2F11c5dnfscl?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
@@ -1348,112 +1345,187 @@
 
           <!--contact form in bottom starting there-->
 
-          <div class="col-lg-7">
-            <form id="contactForm" action="https://formspree.io/f/mgveknrr" method="POST">
-              <div class="row gy-4">
-                
-                <!-- First Name -->
-                <div class="col-md-6">
-                  <label for="first-name-field" class="pb-2">First Name</label>
-                  <input type="text" name="first_name" id="first-name-field" class="form-control" required>
-                </div>
-    
-                <!-- Last Name -->
-                <div class="col-md-6">
-                  <label for="last-name-field" class="pb-2">Last Name</label>
-                  <input type="text" name="last_name" id="last-name-field" class="form-control" required>
-                </div>
-    
-                <!-- Email Address -->
-                <div class="col-md-6">
-                  <label for="email-field" class="pb-2">Email Address</label>
-                  <input type="email" name="_replyto" id="email-field" class="form-control" required>
-                </div>
-    
-                <!-- Phone Number -->
-                <div class="col-md-6">
-                  <label for="phone-field" class="pb-2">Phone Number</label>
-                  <input type="tel" name="phone" id="phone-field" class="form-control" required>
-                </div>
-    
-                <!-- Message -->
-                  <div class="col-md-12">
-                    <label for="message-field" class="pb-2">Message</label>
-                      <textarea name="message" id="message-field" rows="10" class="form-control" required></textarea>
-                  </div>
-    
-                <!-- Feedback Ratings -->
-                <div class="col-md-12">
-                  <label class="pb-2">Rate Us (1 to 10):</label>
-    
-                  <!-- View -->
-                  <div class="pb-3">
-                    <label>How likely would you visit our website again?</label>
-                    <select name="rating_view" class="form-control" required>
-                      <option value="" disabled selected>Select a rating</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
-                    </select>
-                  </div>
-    
-                  <!-- Needs -->
-                  <div class="pb-3">
-                    <label>How well does our website meet your needs?</label>
-                    <select name="rating_needs" class="form-control" required>
-                      <option value="" disabled selected>Select a rating</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
-                    </select>
-                  </div>
-    
-                  <!-- Trust -->
-                  <div class="pb-3">
-                    <label>How much do you trust the information on our website?</label>
-                    <select name="rating_trust" class="form-control" required>
-                      <option value="" disabled selected>Select a rating</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
-                    </select>
-                  </div>
-                </div>
-    
-                <!-- Submit Button -->
-                <div class="col-md-12 text-center">
-                  <div class="loading" style="display: none;">Loading...</div>
-                  <div class="sent-message" style="display: none;">Your message has been sent. Thank you!</div>
-                  <div class="error-message" style="display: none; color: red;">There was an error sending your message. Please try again later.</div>
-                  <button type="submit">Send Message</button>
-                </div>
-    
+        <!-- Contact Form -->
+        <div class="col-lg-7">
+          <form id="contactForm" action="https://formspree.io/f/mgveknrr" method="POST">
+            <div class="row gy-4">
+
+              <!-- Name -->
+              <div class="col-md-6">
+                <label for="name-field" class="pb-2">Name</label>
+                <input type="text" name="name" id="name-field" class="form-control" required>
               </div>
-            </form>
-          </div>
-    
+
+              <!-- Email -->
+              <div class="col-md-6">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="_replyto" class="form-control" required>
+              </div>
+              <!-- Phone -->
+              <div class="col-md-6">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" class="form-control" required>
+              </div>
+              
+              <!-- Address -->
+              <div class="col-md-12">
+                <label for="address-field" class="pb-2">Address</label>
+                <input type="text" name="address" id="address-field" placeholder="Address" class="form-control mb-2" required>
+            
+                <label for="country-select" class="pb-2">Country</label>
+                <select id="country-select" class="form-control" required>
+                    <option value="" disabled selected>Select a Country</option>
+                    <!-- Country options will be dynamically loaded -->
+                </select>
+            
+                <label for="city-select" class="pb-2">City</label>
+                <select id="city-select" class="form-control" required>
+                    <option value="" disabled selected>Select a City</option>
+                    <!-- City options will be dynamically loaded based on the selected country -->
+                </select>
+              </div>
+
+              <!-- Message -->
+              <div class="col-md-12">
+                <label for="message-field" class="pb-2">Message</label>
+                <textarea
+                  name="message"
+                  id="message-field"
+                  rows="1"
+                  class="form-control"
+                  style="resize: none; overflow: hidden;"
+                  oninput="autoExpand(this)"
+                  required
+                ></textarea>
+              </div>
+              
+              
+              <!-- Rating: Rate in Design -->
+              <div class="col-md-12">
+                <label for="designRating" class="pb-2">How would you rate the design of this site?</label>
+                <input
+                  type="range"
+                  id="designRating"
+                  name="designRating"
+                  min="1"
+                  max="5"
+                  step="1"
+                  value="3"
+                  class="custom-slider"
+                  oninput="updateSliderIcon(this)"
+              >          
+                <div class="slider-icons">
+                  <span class="icon" data-value="1">😞</span>
+                  <span class="icon" data-value="2">😕</span>
+                  <span class="icon" data-value="3">😐</span>
+                  <span class="icon" data-value="4">😊</span>
+                  <span class="icon" data-value="5">😁</span>
+                </div>
+              </div>
+
+              <!-- Rating: Clarity of Information -->
+              <div class="col-md-12">
+                <label for="infoRating" class="pb-2">How clear is the information provided?</label>
+                <input
+                  type="range"
+                  id="infoRating"
+                  name="infoRating"
+                  min="1"
+                  max="5"
+                  step="1"
+                  value="3"
+                  class="custom-slider"
+                  oninput="updateSliderIcon(this)"
+              >     
+                <div class="slider-icons">
+                  <span class="icon" data-value="1">😞</span>
+                  <span class="icon" data-value="2">😕</span>
+                  <span class="icon" data-value="3">😐</span>
+                  <span class="icon" data-value="4">😊</span>
+                  <span class="icon" data-value="5">😁</span>
+                </div>
+              </div>
+
+              <!-- Rating: Trust in Information -->
+              <div class="col-md-12">
+                <label for="trustRating" class="pb-2">Did you trust the information on our website?</label>
+                <input
+                  type="range"
+                  id="trustRating"
+                  name="trustRating"
+                  min="1"
+                  max="5"
+                  step="1"
+                  value="3"
+                  class="custom-slider"
+                  oninput="updateSliderIcon(this)"
+              >     
+                <div class="slider-icons">
+                  <span class="icon" data-value="1">😞</span>
+                  <span class="icon" data-value="2">😕</span>
+                  <span class="icon" data-value="3">😐</span>
+                  <span class="icon" data-value="4">😊</span>
+                  <span class="icon" data-value="5">😁</span>
+                </div>
+              </div>
+
+              <!-- Rating: Likelihood to Recommend -->
+              <div class="col-md-12">
+                <label for="recommendationRating" class="pb-2">How likely are you to recommend this site?</label>
+                <input
+                  type="range"
+                  id="recommendationRating"
+                  name="recommendationRating"
+                  min="1"
+                  max="5"
+                  step="1"
+                  value="3"
+                  class="custom-slider"
+                  oninput="updateSliderIcon(this)"
+              >     
+                <div class="slider-icons">
+                  <span class="icon" data-value="1">😞</span>
+                  <span class="icon" data-value="2">😕</span>
+                  <span class="icon" data-value="3">😐</span>
+                  <span class="icon" data-value="4">😊</span>
+                  <span class="icon" data-value="5">😁</span>
+                </div>
+              </div>
+
+              <!-- Rating: Likelihood to Visit Again -->
+              <div class="col-md-12">
+                <label for="visitRating" class="pb-2">Will you visit our website again?</label>
+                <input
+                  type="range"
+                  id="visitRating"
+                  name="visitRating"
+                  min="1"
+                  max="5"
+                  step="1"
+                  value="3"
+                  class="custom-slider"
+                  oninput="updateSliderIcon(this)"
+              >     
+                <div class="slider-icons">
+                  <span class="icon" data-value="1">😞</span>
+                  <span class="icon" data-value="2">😕</span>
+                  <span class="icon" data-value="3">😐</span>
+                  <span class="icon" data-value="4">😊</span>
+                  <span class="icon" data-value="5">😁</span>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="col-md-12 text-center">
+                <div class="loading" style="display: none;">Loading...</div>
+                <div class="sent-message" style="display: none;">Your message has been sent. Thank you!</div>
+                <div class="error-message" style="display: none; color: red;">There was an error sending your message. Please try again later.</div>
+                <button type="submit" class="gradient-submit">Submit</button>
+              </div>
+            </div>
+          </form>
         </div>
+      </div>
       </div>
     </section>
 
@@ -1491,6 +1563,7 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="form-handler.js"></script>
   <script src="assets/js/function.js"></script>
+  <script src="assets/js/country-states.js"></script>
 
 
   <!-- Main JS File -->
